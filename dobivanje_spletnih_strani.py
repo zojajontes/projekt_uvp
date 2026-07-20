@@ -18,7 +18,7 @@ def prenesi_sezone(zacetno_leto, koncno_leto):
 
         # poslemo zahtevo na internet in dobimo nazaj HTML vsebino strani
         stran = requests.get(url) #gre na net in najde to stran
-
+        stran.encoding = "utf-8"
         # shranimo HTML v datoteko, npr. strani_sezon/NHL_2000.html
         with open(f"strani_sezon/NHL_{leto}.html", "w", encoding="utf-8") as f: #with je zato da se tut sama zapre da ne rabmo mi
             f.write(stran.text) #v mapi kjer shranjuje sezone naredi datoteko s tem imenom in pol besedilo iz splene strani napise not
