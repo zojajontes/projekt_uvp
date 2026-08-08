@@ -16,7 +16,12 @@ def izlusci_sezono(html, leto):
     )
 
     # privzete vrednosti - ce mvp ni najden, ostanejo None
-    mvp_ime = mvp.group(1) if mvp else None
+    if mvp:
+        mvp_ime = mvp.group(1)
+    else:
+        mvp_ime = None
+
+    #nastavmo vse na None in pol spreminjamo tm k obstajajo    
     mvp_goli = None
     mvp_asistence = None
     mvp_tocke = None

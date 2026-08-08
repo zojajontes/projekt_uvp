@@ -23,5 +23,5 @@ def prenesi_sezone(zacetno_leto, koncno_leto):
         with open(f"strani_sezon/NHL_{leto}.html", "w", encoding="utf-8") as f: #with je zato da se tut sama zapre da ne rabmo mi
             f.write(stran.text) #v mapi kjer shranjuje sezone naredi datoteko s tem imenom in pol besedilo iz splene strani napise not
 
-        # izpisemo v terminal, da vidimo napredek
+        # izpise v terminal, da vidimo napredek
         print(f"Sezona {leto} shranjena.")
